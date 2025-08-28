@@ -25,7 +25,12 @@ export class AuthService {
     return user;
   }
 
-  login(user: IUser) {
+  login(user: IUser): {
+    message: string;
+    uuid: string;
+    username: string;
+    token: string;
+  } {
     const { uuid, username } = user;
 
     return {
